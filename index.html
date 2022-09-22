@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+   <title>CSS Layout - The Position Property</title>
+ </head>
+ <body>
+   <main id="main-doc">
+     <nav id="navbar">
+      <header>
+    <h1>Introduction to CSS Position Property</h1>
+      </header>
+      <div class="nav-link-bar">
+      <a href="#introduction" class="nav-link">Introduction</a>
+      <a href="#static_position" class="nav-link">Static Position</a>
+      <a href="#fixed_position" class="nav-link">Fixed Position</a>
+      <a href="#sticky_position" class="nav-link">Sticky Position</a>
+      <a href="#absolute_vs._relative_position" class="nav-link">Absolute vs. Relative Position</a>
+      </div>
+     </nav>
+     <section id="introduction" class="main-section">
+       <header>
+         <h1>Introduction</h1>
+       </header>
+         <p>The position property specifies the type of positioning used for an element, in total there are five different position values, they are:</p>
+         <ul>
+           <li>Static</li>
+           <li>Relative</li>
+           <li>Fixed</li>
+           <li>Absolute</li>
+           <li>Sticky</li>
+         </ul>
+         <p>Using these different position properties can be adjusted using the top, bottom, left and right properties. It is mandatory that you set the value as so.</p>
+         <p>In example, you would set the element position property using css. then set left, right, top, bottom. See example below:
+         </p>
+         <code>
+           element {
+             <br>
+             position: fixed;
+             <br>
+             top: 10px
+             <br>
+           }
+           <br>
+         </code>
+           <p>
+           We'll talk more about this in detail. In later sections.
+         </p>
+     </section>
+
+     <section id="static_position" class="main-section">
+       <header>
+         <h1 >Static Position</h1>
+         </header>
+         <p>By default, elements are static by default. That being said, elements with the static position are not able to be positioned with left, right, top and bottom.</p>
+         <code>
+           element{
+             <br>
+             position: relative //remember by default, the position is relative, unneeded unless resetting position to default. 
+             </br>
+           }
+         </code>
+     </section>
+
+    <section id="fixed_position" class="main-section">
+       <header>
+         <h1>Fixed Position</h1>
+         </header>
+         <p>A fixed position is always in respect to the viewport for the user. So for example </p>
+     <p>
+       For example, when the elements has the top of 0, then the position will always be at the top of the page regardless of the position the viewer has scrolled to. Think about this in contrast to the sticky position property explained below.
+     </p>
+     <code>
+       element {
+         <br>
+         position: fixed;
+         <br>
+         top: 0px; //Affixes element to the top of the page.
+         <br>
+       }
+       </code>
+          </section>
+
+   <section id="sticky_position" class="main-section">
+       <header>
+         <h1>Sticky Position</h1>
+         </header>
+         <p>The sticky position is based on the user's scroll position. A sticky elements toggles between relative and fixed, dependent on the scroll position by the user's viewport.</p>
+         <p>For example, when the elements hits the limit of the viewport. The element will become fixed at that given position with the sticky position. The element will follow the user's position at a fixed position becoming permanent.
+     </p>
+     <code>
+       position: sticky; //Once limit of viewport has been reached upon element, sticky will attach to viewport at top of page.
+       top: 0px;
+       </code>
+     </section>
+
+   <section id="absolute_vs._relative_position" class="main-section">
+       <header>
+         <h1>Absolute vs. Relative Position</h1>
+         </header>
+         <p>Although distinct position properties, Absolute and Relative Position function in similar manner. To best explain both of the properties, it'd probably be most beneficial to contrast and compare the two.</p>
+         <p>
+           Relative position moves the box model of the element the space "relative" to the element's current position.
+           </p>
+           <p>
+           For example, let's call the box element 1 and it has the class element 1.
+                      <code>
+
+      <br>
+          
+           .element 1 {           
+      <br>
+           position: relative;
+      <br>
+           top: 20px; // Current position top would be increased by the 20px with a gap left for the user's old position.
+      <br>
+           }
+                 </code>
+
+      <br>
+      </p>
+      <p>
+       Absolute is the opposite, it does not take into account where the element will be and would instead just base it's position on the parent's container.
+       </p>
+     </section>
+   </main>
+ </body>
+</html>
